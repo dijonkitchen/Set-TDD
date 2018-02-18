@@ -1,6 +1,6 @@
 class CustomSet {
-    constructor() {
-        this.values = []
+    constructor(values = []) {
+        this.values = values
     }
 }
 
