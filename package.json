@@ -1,5 +1,13 @@
 {
   "devDependencies": {
-    "jest": "^22.3.0"
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^22.2.2",
+    "jest": "^22.3.0",
+    "regenerator-runtime": "^0.11.1"
+  },
+  "scripts": {
+    "test": "jest"
   }
 }
