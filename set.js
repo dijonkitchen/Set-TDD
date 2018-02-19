@@ -58,7 +58,7 @@ class CustomSet {
     }
 
     union(set) {
-        return this.add(set.values)
+        return new CustomSet(this.values.concat(set.values))
     }
 
     intersect(set) {
