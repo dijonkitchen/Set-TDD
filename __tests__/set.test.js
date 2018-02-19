@@ -165,8 +165,8 @@ test('symmetric difference between Sets immutabily', () => {
     const array2 = [3,4,5]
     const newSet1 = new CustomSet(array1)
     const newSet2 = new CustomSet(array2)
-    const expectedSet1 = newSet2.symmetricDifference(newSet1)
-    const expectedSet2 = newSet1.symmetricDifference(newSet2)
+    const expectedSet1 = newSet1.symmetricDifference(newSet2)
+    const expectedSet2 = newSet2.symmetricDifference(newSet1)
     expect(expectedSet1.values).toEqual([1,2,5])
     expect(expectedSet2.values).toEqual([1,2,5])
     expect(newSet1.values).toEqual(array1)
