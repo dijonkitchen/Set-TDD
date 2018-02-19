@@ -48,6 +48,10 @@ class CustomSet {
     clear() {
         this._values = []
     }
+
+    forEach(callbackFunction) {
+        this._values.forEach(value => callbackFunction(value))
+    }
 }
 
 export default CustomSet
