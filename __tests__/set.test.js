@@ -125,6 +125,7 @@ test('can union Sets immutably', () => {
     const newSet2 = new CustomSet(array2)
     expect(newSet1.union(newSet2).values).toEqual([1,2,3,4,5])
     expect(newSet1.values).toEqual(array1)
+    expect(newSet2.values).toEqual(array2)
 })
 
 test('can intersect Sets', () => {
