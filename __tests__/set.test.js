@@ -109,3 +109,10 @@ test('can clear all the items in a Set', () => {
     newSet.clear()
     expect(newSet.size).toEqual(0)
 })
+
+test('can iterate through Set', () => {
+    const newSet = new CustomSet([3,1,2312,123,23])
+    let newArray = []
+    newSet.forEach(item => newArray.push(item))
+    expect(newArray).toEqual(newSet.values)
+})
