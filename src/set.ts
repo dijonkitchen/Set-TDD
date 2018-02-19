@@ -35,8 +35,14 @@ class CustomSet {
         return this.values
     }
 
-    has(value) {
-        return this.values.includes(value)
+    has(value): boolean {
+        let truthy = false
+        this.values.forEach(item => {
+            if (item === value) {
+                truthy = true
+            }
+        })
+        return truthy
     }
 
     hasAll(values) {
