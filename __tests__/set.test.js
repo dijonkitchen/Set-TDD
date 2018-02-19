@@ -81,3 +81,9 @@ test('disable setting of values', () => {
     expect(() => {newSet.values = [5, 5, 5]}).toThrow()
     expect(newSet.values).toEqual([3])
 })
+
+test('can check if an item is included inside Set', () => {
+    const newSet = new CustomSet([3,1,2312,123,23])
+    expect(newSet.includes(3)).toEqual(true)
+    expect(newSet.includes(0)).toEqual(false)
+})
