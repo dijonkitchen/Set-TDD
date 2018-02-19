@@ -31,14 +31,14 @@ class CustomSet {
         })
     }
 
-    includes(value) {
+    has(value) {
         return this._values.includes(value)
     }
 
-    includesAll(values) {
+    hasAll(values) {
         let truthy = true
         values.forEach(value => {
-            if (!this.includes(value)) {
+            if (!this.has(value)) {
                 truthy = false
             }
         })
