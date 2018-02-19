@@ -4,6 +4,7 @@ const unique = (values) =>
 class CustomSet {
     constructor(values = []) {
         this.values = unique(values)
+        this.size = this.values.length
     }
 
     add(values) {
