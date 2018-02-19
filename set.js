@@ -6,6 +6,14 @@ class CustomSet {
         this._values = unique(values)
     }
 
+    get values() {
+        return this._values
+    }
+
+    get size() {
+        return this._values.length
+    }
+
     add(values) {
         this._values = unique(this._values.concat(values))
     }
@@ -17,14 +25,6 @@ class CustomSet {
                 this._values.splice(this._values.indexOf(value), 1)
             }
         })
-    }
-
-    get size() {
-        return this._values.length
-    }
-
-    get values() {
-        return this._values
     }
 
     includes(value) {
