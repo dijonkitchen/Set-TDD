@@ -18,7 +18,7 @@ class CustomSet {
         this._values = unique(this._values.concat(values))
     }
 
-    remove(values) {
+    delete(values) {
         values.forEach(value => {
             const index = this._values.indexOf(value)
             if (index !== -1) {
