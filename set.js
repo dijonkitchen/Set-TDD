@@ -1,5 +1,5 @@
 const unique = (values) =>
-    values.filter((value, index, self) => self.indexOf(value) === index)
+    values.filter((value, index, self) => self.indexOf(value) === index).sort()
 
 class CustomSet {
     constructor(values = []) {
@@ -69,6 +69,13 @@ class CustomSet {
     setDifference(set) {
         const diffValues = this.values.filter(value => !set.has(value))
         return new CustomSet(diffValues)
+    }
+
+    symmetricDifference(set) {
+        const union = this.union(set)
+        const intersect = this.intersect(set)
+        const symDifference = union.setDifference(intersect)
+        return symDifference
     }
 }
 
