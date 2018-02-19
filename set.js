@@ -87,6 +87,10 @@ class CustomSet {
         })
         return prod
     }
+
+    isSuperset(set) {
+        return this.hasAll(set.values)
+    }
 }
 
 export default CustomSet
