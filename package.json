@@ -11,7 +11,8 @@
     "typescript": "^2.7.2"
   },
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "build": "./node_modules/typescript/bin/tsc"
   },
   "jest": {
     "transform": {
