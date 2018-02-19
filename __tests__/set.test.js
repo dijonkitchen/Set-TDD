@@ -75,3 +75,9 @@ test('disable setting of size', () => {
     expect(() => {newSet.size = 5}).toThrow()
     expect(newSet.size).toEqual(0)
 })
+
+test('disable setting of values', () => {
+    const newSet = new CustomSet([3])
+    expect(() => {newSet.values = [5, 5, 5]}).toThrow()
+    expect(newSet.values).toEqual([3])
+})
