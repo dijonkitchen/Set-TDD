@@ -12,7 +12,10 @@ class CustomSet {
 
     remove(values) {
         values.forEach(value => {
-            this.values.splice(this.values.indexOf(value), 1)
+            const index = this.values.indexOf(value)
+            if (index !== -1) {
+                this.values.splice(this.values.indexOf(value), 1)
+            }
         })
     }
 }
