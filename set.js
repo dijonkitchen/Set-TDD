@@ -3,24 +3,28 @@ const unique = (values) =>
 
 class CustomSet {
     constructor(values = []) {
-        this.values = unique(values)
+        this._values = unique(values)
     }
 
     add(values) {
-        this.values = unique(this.values.concat(values))
+        this._values = unique(this._values.concat(values))
     }
 
     remove(values) {
         values.forEach(value => {
-            const index = this.values.indexOf(value)
+            const index = this._values.indexOf(value)
             if (index !== -1) {
-                this.values.splice(this.values.indexOf(value), 1)
+                this._values.splice(this._values.indexOf(value), 1)
             }
         })
     }
 
     get size() {
-        return this.values.length
+        return this._values.length
+    }
+
+    get values() {
+        return this._values
     }
 }
 
