@@ -43,6 +43,16 @@ test('add values to a Set', () => {
     expect(newSet.values).toEqual([1,2,3])
 })
 
+test('delete a value in a Set', () => {
+    const newSet = new CustomSet([1,2,3])
+    newSet.delete(1)
+    expect(newSet.values).toEqual([2,3])
+    newSet.delete(3)
+    expect(newSet.values).toEqual([2])
+    newSet.delete(4)
+    expect(newSet.values).toEqual([2])
+})
+
 test('delete values to a Set', () => {
     const newSet = new CustomSet([1,2,3])
     newSet.deleteAll([1,3])
