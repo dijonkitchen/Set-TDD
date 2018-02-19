@@ -85,7 +85,7 @@ class CustomSet {
                 prod.push([item1, item2])
             })
         })
-        return prod.sort()
+        return prod
     }
 }
 
