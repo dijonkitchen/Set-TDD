@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/dijonkitchen/Set-TDD.svg?style=svg)](https://circleci.com/gh/dijonkitchen/Set-TDD)
+
 # Set
 
 Building the Set class in Javascript with test-driven development. To learn more about foundational mathematics and continue building incremental functionality, with fast tests, and complete coverage for inexpensive adaptability.
