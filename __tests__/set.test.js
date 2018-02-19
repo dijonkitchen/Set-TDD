@@ -10,8 +10,8 @@ test('default new Set is empty', () => {
 })
 
 test('can pre-populate a new Set', () => {
-    const newSet = new CustomSet([1,2])
-    expect(newSet.values).toEqual([1,2])
+    const newSet = new CustomSet([1, {a: 1, b: 2}])
+    expect(newSet.values).toEqual([1, {a: 1, b: 2}])
 })
 
 test("doesn't pre-populate with duplicates", () => {
