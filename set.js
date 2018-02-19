@@ -77,6 +77,16 @@ class CustomSet {
         const symDifference = union.setDifference(intersect)
         return symDifference
     }
+
+    product(set) {
+        const prod = []
+        this.forEach(item1 => {
+            set.forEach(item2 => {
+                prod.push([item1, item2])
+            })
+        })
+        return prod.sort()
+    }
 }
 
 export default CustomSet
