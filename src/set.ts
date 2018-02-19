@@ -1,8 +1,11 @@
 const unique = (values) =>
     values.filter((value, index, self) => self.indexOf(value) === index)
 
+interface CustomSet {
+    _values: any[]
+}
 class CustomSet {
-    constructor(values = []) {
+    constructor(values: any[] = []) {
         this._values = unique(values).sort()
     }
 
@@ -10,7 +13,7 @@ class CustomSet {
         return this._values
     }
 
-    get size() {
+    get size(): Number {
         return this.values.length
     }
 
@@ -18,7 +21,7 @@ class CustomSet {
         return this._values = unique(this.values.concat(values))
     }
 
-    delete(value) {
+    delete(value): boolean {
         const index = this.values.indexOf(value)
         if (index !== -1) {
             this.values.splice(index, 1)
@@ -35,11 +38,17 @@ class CustomSet {
         return this.values
     }
 
-    has(value) {
-        return this.values.includes(value)
+    has(value): boolean {
+        let truthy = false
+        this.values.forEach(item => {
+            if (item === value) {
+                truthy = true
+            }
+        })
+        return truthy
     }
 
-    hasAll(values) {
+    hasAll(values): boolean {
         let truthy = true
         values.forEach(value => {
             if (!this.has(value)) {
@@ -57,28 +66,28 @@ class CustomSet {
         this.values.forEach(value => callbackFunction(value))
     }
 
-    union(set) {
+    union(set: CustomSet): CustomSet {
         return new CustomSet(this.values.concat(set.values))
     }
 
-    intersect(set) {
+    intersect(set: CustomSet): CustomSet {
         const intersectValues = this.values.filter(value => set.has(value))
         return new CustomSet(intersectValues)
     }
 
-    setDifference(set) {
+    setDifference(set: CustomSet): CustomSet {
         const diffValues = this.values.filter(value => !set.has(value))
         return new CustomSet(diffValues)
     }
 
-    symmetricDifference(set) {
+    symmetricDifference(set: CustomSet): CustomSet {
         const union = this.union(set)
         const intersect = this.intersect(set)
         const symDifference = union.setDifference(intersect)
         return symDifference
     }
 
-    product(set) {
+    product(set: CustomSet): any[] {
         const prod = []
         this.forEach(item1 => {
             set.forEach(item2 => {
@@ -88,7 +97,7 @@ class CustomSet {
         return prod
     }
 
-    isSuperset(set) {
+    isSuperset(set: CustomSet): boolean {
         return this.hasAll(set.values)
     }
 }

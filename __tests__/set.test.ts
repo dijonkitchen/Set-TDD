@@ -1,4 +1,4 @@
-import CustomSet from '../set'
+import CustomSet from '../src/set'
 
 describe('creation', () => {
     test('creates a new Set', () => {
