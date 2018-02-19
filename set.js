@@ -67,7 +67,8 @@ class CustomSet {
     }
 
     difference(set) {
-        return this.deleteAll(this.intersect(set))
+        const diffValues = this.values.filter(value => !set.has(value))
+        return new CustomSet(diffValues)
     }
 }
 
