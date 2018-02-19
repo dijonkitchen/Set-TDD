@@ -87,3 +87,9 @@ test('can check if an item is included inside Set', () => {
     expect(newSet.includes(3)).toEqual(true)
     expect(newSet.includes(0)).toEqual(false)
 })
+
+test('can check if all items are included in a Set', () => {
+    const newSet = new CustomSet([3,1,2312,123,23])
+    expect(newSet.includesAll([1,3])).toEqual(true)
+    expect(newSet.includesAll([0,1])).toEqual(false)
+})
