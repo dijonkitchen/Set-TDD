@@ -30,6 +30,16 @@ class CustomSet {
     includes(value) {
         return this._values.includes(value)
     }
+
+    includesAll(values) {
+        let truthy = true
+        values.forEach(value => {
+            if (!this.includes(value)) {
+                truthy = false
+            }
+        })
+        return truthy
+    }
 }
 
 export default CustomSet
