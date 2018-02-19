@@ -1,17 +1,25 @@
-# Project's README
+# Set
 
-One Paragraph of the WHAT and the WHY of the project and WHO it's for goes here
+Building the Set class in Javascript with test-driven development. To learn more about foundational mathematics and continue building incremental functionality, with fast tests, and complete coverage for inexpensive adaptability.
+
+You can see details on how this was built with the [conventional commits](https://conventionalcommits.org/) in the [`git log`](https://github.com/dijonkitchen/Set-TDD/commits/master)!
+
+Background:
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
+https://en.wikipedia.org/wiki/Set_theory
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
-```
-Give examples
+```sh
+brew install node
+brew install yarn
 ```
 
 ### Installing
@@ -34,30 +42,15 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-Explain how to run the tests for this system
+Testing was done with [Jest](https://facebook.github.io/jest/).
 
-### Break down into end to end tests
+To run tests:
 
-Explain what these tests test and why
-
-```
-Give an example
+```sh
+yarn test
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
+For development, you can watch for changes with:
+```sh
+yarn test --watch
 ```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTION.md) for details on how to contribute to this project as well as other details like our code of conduct.
-
-See also the list of [contributors](./graph/contributors) who participated in this project.
