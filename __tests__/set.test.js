@@ -122,3 +122,9 @@ test('can union Sets', () => {
     const newSet2 = new CustomSet([3,4,5])
     expect(newSet1.union(newSet2)).toEqual([1,2,3,4,5])
 })
+
+test('can intersect Sets', () => {
+    const newSet1 = new CustomSet([1,2,3,4])
+    const newSet2 = new CustomSet([3,4,5])
+    expect(newSet1.intersect(newSet2)).toEqual([3,4])
+})
