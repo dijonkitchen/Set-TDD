@@ -214,3 +214,14 @@ test('associative laws', () => {
     expect(newSet1.union(newSet2).union(newSet3)).toEqual(newSet1.union(newSet2.union(newSet3)))
     expect(newSet1.intersect(newSet2).intersect(newSet3)).toEqual(newSet1.intersect(newSet2.intersect(newSet3)))
 })
+
+test('distributative laws', () => {
+    const array1 = [1,2,3]
+    const array2 = [3,4,5]
+    const array3 = ['a', 'b', 'c']
+    const newSet1 = new CustomSet(array1)
+    const newSet2 = new CustomSet(array2)
+    const newSet3 = new CustomSet(array3)
+    expect(newSet1.union(newSet2.intersect(newSet3))).toEqual(newSet1.union(newSet2).intersect(newSet1.union(newSet3)))
+    expect(newSet1.intersect(newSet2.union(newSet3))).toEqual(newSet1.intersect(newSet2).union(newSet1.intersect(newSet3)))
+})
