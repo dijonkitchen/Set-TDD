@@ -168,7 +168,7 @@ test('symmetric difference between Sets immutabily', () => {
     const expectedSet1 = newSet1.symmetricDifference(newSet2)
     const expectedSet2 = newSet2.symmetricDifference(newSet1)
     expect(expectedSet1.values).toEqual([1,2,5])
-    expect(expectedSet2.values).toEqual([5,1,2])
+    expect(expectedSet2.values).toEqual([1,2,5])
     expect(newSet1.values).toEqual(array1)
     expect(newSet2.values).toEqual(array2)
 })
@@ -180,10 +180,10 @@ test('product of Sets', () => {
     const newSet2 = new CustomSet(array2)
     const expectedProduct1 = newSet1.product(newSet2)
     const expectedProduct2 = newSet2.product(newSet1)
-    expect(expectedProduct1).toEqual([['red', 3], ['red', 4],['blue', 3], ['blue', 4]])
-    expect(expectedProduct2).toEqual([[3, 'red'], [3, 'blue'], [4, 'red'], [4, 'blue']])
-    expect(newSet1.values).toEqual(array1)
-    expect(newSet2.values).toEqual(array2)
+    expect(expectedProduct1).toEqual([["blue", 3], ["blue", 4], ["red", 3], ["red", 4]])
+    expect(expectedProduct2).toEqual([[3, "blue"], [3, "red"], [4, "blue"], [4, "red"]])
+    expect(newSet1.values).toEqual(array1.sort())
+    expect(newSet2.values).toEqual(array2.sort())
 })
 
 test('superset of a Set', () => {

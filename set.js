@@ -3,7 +3,7 @@ const unique = (values) =>
 
 class CustomSet {
     constructor(values = []) {
-        this._values = unique(values)
+        this._values = unique(values).sort()
     }
 
     get values() {
