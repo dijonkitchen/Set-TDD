@@ -18,12 +18,16 @@ class CustomSet {
         this._values = unique(this._values.concat(values))
     }
 
+    delete(value) {
+        const index = this._values.indexOf(value)
+        if (index !== -1) {
+            this._values.splice(this._values.indexOf(value), 1)
+        }
+    }
+
     deleteAll(values) {
         values.forEach(value => {
-            const index = this._values.indexOf(value)
-            if (index !== -1) {
-                this._values.splice(this._values.indexOf(value), 1)
-            }
+            this.delete(value)
         })
     }
 
