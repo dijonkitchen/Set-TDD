@@ -194,3 +194,12 @@ test('superset of a Set', () => {
     expect(newSet1.isSuperset(newSet2)).toEqual(true)
     expect(newSet2.isSuperset(newSet1)).toEqual(false)
 })
+
+test('commutative laws', () => {
+    const array1 = [1,2,3]
+    const array2 = [3,4,5]
+    const newSet1 = new CustomSet(array1)
+    const newSet2 = new CustomSet(array2)
+    expect(newSet1.union(newSet2)).toEqual(newSet2.union(newSet1))
+    expect(newSet1.intersect(newSet2)).toEqual(newSet2.intersect(newSet1))
+})
