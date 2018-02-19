@@ -9,6 +9,12 @@ class CustomSet {
     add(values) {
         this.values = unique(this.values.concat(values))
     }
+
+    remove(values) {
+        values.forEach(value => {
+            this.values.splice(this.values.indexOf(value), 1)
+        })
+    }
 }
 
 export default CustomSet
