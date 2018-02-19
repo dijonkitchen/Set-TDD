@@ -172,3 +172,16 @@ test('symmetric difference between Sets immutabily', () => {
     expect(newSet1.values).toEqual(array1)
     expect(newSet2.values).toEqual(array2)
 })
+
+test('product of Sets', () => {
+    const array1 = ['red', 'blue']
+    const array2 = [3,4]
+    const newSet1 = new CustomSet(array1)
+    const newSet2 = new CustomSet(array2)
+    const expectedProduct1 = newSet1.product(newSet2)
+    const expectedProduct2 = newSet2.product(newSet1)
+    expect(expectedProduct1).toEqual([['red', 3], ['red', 4],['blue', 3], ['blue', 4]].sort())
+    expect(expectedProduct2).toEqual([[3, 'red'], [3, 'blue'], [4, 'red'], [4, 'blue']].sort())
+    expect(newSet1.values).toEqual(array1)
+    expect(newSet2.values).toEqual(array2)
+})
