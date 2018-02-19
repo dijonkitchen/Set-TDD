@@ -26,6 +26,10 @@ class CustomSet {
     get values() {
         return this._values
     }
+
+    includes(value) {
+        return this._values.includes(value)
+    }
 }
 
 export default CustomSet
