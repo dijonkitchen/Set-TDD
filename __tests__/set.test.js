@@ -48,3 +48,9 @@ test('remove values to a Set', () => {
     newSet.remove([1,3])
     expect(newSet.values).toEqual([2])
 })
+
+test('remove values to a Set', () => {
+    const newSet = new CustomSet([1,2,3])
+    newSet.remove([1,4])
+    expect(newSet.values).toEqual([2,3])
+})
