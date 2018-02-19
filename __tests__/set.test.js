@@ -73,4 +73,5 @@ test('show size of a Set', () => {
 test('disable setting of size', () => {
     const newSet = new CustomSet
     expect(() => {newSet.size = 5}).toThrow()
+    expect(newSet.size).toEqual(0)
 })
