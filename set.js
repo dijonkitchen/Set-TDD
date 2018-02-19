@@ -40,6 +40,10 @@ class CustomSet {
         })
         return truthy
     }
+
+    clear() {
+        return this._values = []
+    }
 }
 
 export default CustomSet
