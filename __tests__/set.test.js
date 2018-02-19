@@ -138,23 +138,23 @@ test('can intersect Sets immutabily', () => {
     expect(newSet2.values).toEqual(array2)
 })
 
-test('can check difference between Sets immutabily', () => {
+test('can check set difference between Sets immutabily', () => {
     const array1 = [1,2,3,4]
     const array2 = [3,4,5]
     const newSet1 = new CustomSet(array1)
     const newSet2 = new CustomSet(array2)
-    const expectedSet = newSet1.difference(newSet2)
+    const expectedSet = newSet1.setDifference(newSet2)
     expect(expectedSet.values).toEqual([1,2])
     expect(newSet1.values).toEqual(array1)
     expect(newSet2.values).toEqual(array2)
 })
 
-test('can check difference between Sets immutabily', () => {
+test('can check set difference between Sets immutabily', () => {
     const array1 = [1,2,3,4]
     const array2 = [3,4,5]
     const newSet1 = new CustomSet(array1)
     const newSet2 = new CustomSet(array2)
-    const expectedSet = newSet2.difference(newSet1)
+    const expectedSet = newSet2.setDifference(newSet1)
     expect(expectedSet.values).toEqual([5])
     expect(newSet1.values).toEqual(array1)
     expect(newSet2.values).toEqual(array2)
