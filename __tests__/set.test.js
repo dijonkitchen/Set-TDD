@@ -233,3 +233,9 @@ test('identity laws', () => {
     const newSet2 = new CustomSet(array2)
     expect(newSet1.union(newSet2)).toEqual(newSet1)
 })
+
+test('idempotent laws', () => {
+    const array1 = [1,2,3]
+    const newSet1 = new CustomSet(array1)
+    expect(newSet1.union(newSet1)).toEqual(newSet1)
+})
