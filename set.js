@@ -32,6 +32,7 @@ class CustomSet {
         values.forEach(value => {
             this.delete(value)
         })
+        return this.values
     }
 
     has(value) {
@@ -62,6 +63,10 @@ class CustomSet {
 
     intersect(set) {
         return this._values.filter(value => set.has(value))
+    }
+
+    difference(set) {
+        return this.deleteAll(this.intersect(set))
     }
 }
 
