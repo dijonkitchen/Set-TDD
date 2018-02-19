@@ -116,3 +116,9 @@ test('can iterate through Set', () => {
     newSet.forEach(item => newArray.push(item))
     expect(newArray).toEqual(newSet.values)
 })
+
+test('can union Sets', () => {
+    const newSet1 = new CustomSet([1,2,3])
+    const newSet2 = new CustomSet([3,4,5])
+    expect(newSet1.union(newSet2)).toEqual([1,2,3,4,5])
+})
