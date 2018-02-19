@@ -42,7 +42,7 @@ class CustomSet {
     }
 
     clear() {
-        return this._values = []
+        this._values = []
     }
 }
 

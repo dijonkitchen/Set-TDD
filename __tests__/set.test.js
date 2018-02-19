@@ -96,6 +96,6 @@ test('can check if all items are included in a Set', () => {
 
 test('can clear all the items in a Set', () => {
     const newSet = new CustomSet([3,1,2312,123,23])
-    expect(newSet.clear()).toEqual([])
+    newSet.clear()
     expect(newSet.size).toEqual(0)
 })
