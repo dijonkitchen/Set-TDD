@@ -62,7 +62,8 @@ class CustomSet {
     }
 
     intersect(set) {
-        return this.values.filter(value => set.has(value))
+        const intersectValues = this.values.filter(value => set.has(value))
+        return new CustomSet(intersectValues)
     }
 
     difference(set) {
