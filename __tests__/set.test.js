@@ -117,10 +117,14 @@ test('can iterate through Set', () => {
     expect(newArray).toEqual(newSet.values)
 })
 
-test('can union Sets', () => {
-    const newSet1 = new CustomSet([1,2,3])
-    const newSet2 = new CustomSet([3,4,5])
-    expect(newSet1.union(newSet2)).toEqual([1,2,3,4,5])
+test('can union Sets immutably', () => {
+    const array1 = [1,2,3]
+    const array2 = [3,4,5]
+
+    const newSet1 = new CustomSet(array1)
+    const newSet2 = new CustomSet(array2)
+    expect(newSet1.union(newSet2).values).toEqual([1,2,3,4,5])
+    expect(newSet1.values).toEqual(array1)
 })
 
 test('can intersect Sets', () => {
