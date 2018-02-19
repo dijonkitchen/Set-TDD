@@ -15,7 +15,7 @@ class CustomSet {
     }
 
     add(values) {
-        this._values = unique(this._values.concat(values))
+        return this._values = unique(this._values.concat(values))
     }
 
     delete(value) {
@@ -51,6 +51,10 @@ class CustomSet {
 
     forEach(callbackFunction) {
         this._values.forEach(value => callbackFunction(value))
+    }
+
+    union(set) {
+        return this.add(set.values)
     }
 }
 
