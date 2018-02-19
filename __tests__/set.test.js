@@ -120,7 +120,6 @@ test('can iterate through Set', () => {
 test('can union Sets immutably', () => {
     const array1 = [1,2,3]
     const array2 = [3,4,5]
-
     const newSet1 = new CustomSet(array1)
     const newSet2 = new CustomSet(array2)
     expect(newSet1.union(newSet2).values).toEqual([1,2,3,4,5])
@@ -128,10 +127,15 @@ test('can union Sets immutably', () => {
     expect(newSet2.values).toEqual(array2)
 })
 
-test('can intersect Sets', () => {
-    const newSet1 = new CustomSet([1,2,3,4])
-    const newSet2 = new CustomSet([3,4,5])
-    expect(newSet1.intersect(newSet2)).toEqual([3,4])
+test('can intersect Sets immutabily', () => {
+    const array1 = [1,2,3,4]
+    const array2 = [3,4,5]
+    const newSet1 = new CustomSet(array1)
+    const newSet2 = new CustomSet(array2)
+    const expectedSet = newSet1.intersect(newSet2)
+    expect(expectedSet.values).toEqual([3,4])
+    expect(newSet1.values).toEqual(array1)
+    expect(newSet2.values).toEqual(array2)
 })
 
 test('can check difference between Sets', () => {
