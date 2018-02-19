@@ -45,13 +45,13 @@ test('add values to a Set', () => {
 
 test('delete values to a Set', () => {
     const newSet = new CustomSet([1,2,3])
-    newSet.delete([1,3])
+    newSet.deleteAll([1,3])
     expect(newSet.values).toEqual([2])
 })
 
 test('delete values to a Set', () => {
     const newSet = new CustomSet([1,2,3])
-    newSet.delete([1,4])
+    newSet.deleteAll([1,4])
     expect(newSet.values).toEqual([2,3])
 })
 
