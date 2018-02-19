@@ -185,3 +185,12 @@ test('product of Sets', () => {
     expect(newSet1.values).toEqual(array1)
     expect(newSet2.values).toEqual(array2)
 })
+
+test('superset of a Set', () => {
+    const array1 = [1,2,3,4]
+    const array2 = [3,4]
+    const newSet1 = new CustomSet(array1)
+    const newSet2 = new CustomSet(array2)
+    expect(newSet1.isSuperset(newSet2)).toEqual(true)
+    expect(newSet2.isSuperset(newSet1)).toEqual(false)
+})
