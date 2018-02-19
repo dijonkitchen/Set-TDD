@@ -11,17 +11,17 @@ class CustomSet {
     }
 
     get size() {
-        return this._values.length
+        return this.values.length
     }
 
     add(values) {
-        return this._values = unique(this._values.concat(values))
+        return this._values = unique(this.values.concat(values))
     }
 
     delete(value) {
-        const index = this._values.indexOf(value)
+        const index = this.values.indexOf(value)
         if (index !== -1) {
-            this._values.splice(index, 1)
+            this.values.splice(index, 1)
             return true
         } else {
             return false
@@ -36,7 +36,7 @@ class CustomSet {
     }
 
     has(value) {
-        return this._values.includes(value)
+        return this.values.includes(value)
     }
 
     hasAll(values) {
@@ -54,7 +54,7 @@ class CustomSet {
     }
 
     forEach(callbackFunction) {
-        this._values.forEach(value => callbackFunction(value))
+        this.values.forEach(value => callbackFunction(value))
     }
 
     union(set) {
@@ -62,7 +62,7 @@ class CustomSet {
     }
 
     intersect(set) {
-        return this._values.filter(value => set.has(value))
+        return this.values.filter(value => set.has(value))
     }
 
     difference(set) {
