@@ -13,3 +13,8 @@ test('can pre-populate a new Set', () => {
     const newSet = new CustomSet([1,2])
     expect(newSet.values).toEqual([1,2])
 })
+
+test("doesn't pre-populate with duplicates", () => {
+    const newSet = new CustomSet([1,1])
+    expect(newSet.values).toEqual([1])
+})
