@@ -1,10 +1,10 @@
 import CustomSet from '../set'
 
-test('creates a new CustomSet', () => {
+test('creates a new Set', () => {
     expect(new CustomSet).toBeTruthy()
 })
 
-test('default new CustomSet is empty', () => {
+test('default new Set is empty', () => {
     const newSet = new CustomSet
     expect(newSet.values).toEqual([])
 })
