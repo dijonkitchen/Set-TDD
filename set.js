@@ -4,7 +4,6 @@ const unique = (values) =>
 class CustomSet {
     constructor(values = []) {
         this.values = unique(values)
-        this.size = this.values.length
     }
 
     add(values) {
@@ -18,6 +17,10 @@ class CustomSet {
                 this.values.splice(this.values.indexOf(value), 1)
             }
         })
+    }
+
+    get size() {
+        return this.values.length
     }
 }
 
