@@ -56,6 +56,10 @@ class CustomSet {
     union(set) {
         return this.add(set.values)
     }
+
+    intersect(set) {
+        return this._values.filter(value => set.has(value))
+    }
 }
 
 export default CustomSet
