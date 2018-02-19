@@ -21,7 +21,10 @@ class CustomSet {
     delete(value) {
         const index = this._values.indexOf(value)
         if (index !== -1) {
-            this._values.splice(this._values.indexOf(value), 1)
+            this._values.splice(index, 1)
+            return true
+        } else {
+            return false
         }
     }
 
