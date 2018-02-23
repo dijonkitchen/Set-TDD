@@ -89,6 +89,7 @@ describe('size', () => {
 
     test('size is read-only', () => {
         const newSet = new CustomSet
+        // @ts-ignore: Indented error test
         expect(() => {newSet.size = 5}).toThrow()
         expect(newSet.size).toEqual(0)
     })
@@ -97,6 +98,7 @@ describe('size', () => {
 describe('miscellaneous methods', () => {
     test('values are read-only', () => {
         const newSet = new CustomSet([3])
+        // @ts-ignore: Indented error test
         expect(() => {newSet.values = [5, 5, 5]}).toThrow()
         expect(newSet.values).toEqual([3])
     })
