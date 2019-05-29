@@ -7,7 +7,7 @@
     "babel-jest": "^22.2.2",
     "jest": "^22.3.0",
     "regenerator-runtime": "^0.11.1",
-    "ts-jest": "^22.0.4",
+    "ts-jest": "^23.10.5",
     "typescript": "^2.7.2"
   },
   "scripts": {
