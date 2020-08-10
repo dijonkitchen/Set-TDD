@@ -4,7 +4,7 @@
     "@babel/preset-env": "^7.10.3",
     "@types/jest": "^26.0.4",
     "babel-core": "^7.0.0-0",
-    "babel-jest": "^22.2.2",
+    "babel-jest": "^26.3.0",
     "jest": "^23.6.0",
     "regenerator-runtime": "^0.13.7",
     "ts-jest": "^23.10.5",
